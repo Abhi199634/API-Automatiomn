@@ -1,0 +1,114 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-09-14T12:29:17.414Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4025000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.beforeSceanrio()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Verify if deleteplace is working fine",
+        "description": "",
+        "id": "validating-place-api-s;verify-if-deleteplace-is-working-fine",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1155076800,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "DeletePlace payload",
+            "match": {
+              "location": "stepDefinitions.StepDefinition.delete_place_payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4582854900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user is calling  \"DeletePlaceAPI\" with \"post\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"DeletePlaceAPI\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"post\"",
+                  "offset": 39
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.user_is_calling_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected [200] but found [404]\r\n\tat org.testng.Assert.fail(Assert.java:99)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:1037)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:140)\r\n\tat org.testng.Assert.assertEquals(Assert.java:122)\r\n\tat org.testng.Assert.assertEquals(Assert.java:907)\r\n\tat org.testng.Assert.assertEquals(Assert.java:917)\r\n\tat stepDefinitions.StepDefinition.api_is_success_with_status_code_is(StepDefinition.java:116)\r\n\tat ✽.API is success with status code is \"200\"(file:///C:/Users/abhishek.gupta05/eclipse-workspace/API_Framework/src/test/java/Features/place.feature:23)\r\n",
+              "duration": 13963500,
+              "status": "failed"
+            },
+            "line": 23,
+            "name": "API is success with status code is \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 35
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.api_is_success_with_status_code_is(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "\"status\" in the  response is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinitions.StepDefinition.in_the_response_is(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlace"
+          }
+        ]
+      }
+    ],
+    "name": "Validating place API\u0027S",
+    "description": "",
+    "id": "validating-place-api-s",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/place.feature",
+    "tags": []
+  }
+]
